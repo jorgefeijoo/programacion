@@ -7,6 +7,7 @@ public class Operadores {
         System.out.println("multiplicacion " + a*b);
         System.out.println("division " + a/b);
         System.out.println("resto " + a%b);
+       
         System.out.println("a es igua a b ? " + (a==b));
         System.out.println("a es distinto de b " + (a!=b));
         System.out.println("a es mayor que b ? " + (a>b));
