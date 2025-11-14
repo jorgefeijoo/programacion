@@ -14,5 +14,10 @@ public class appAlumno {
     jorge.comer();
     jorge.atender();
 
+    Alumno gonzalo= new Alumno("Gonzalo","cuns","22222222G",17);
+    System.out.println(gonzalo.nome);
+    System.out.println(gonzalo.apelidos);
+    System.out.println(gonzalo.dni);
+    System.out.println(gonzalo.edad);
   }
 }

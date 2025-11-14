@@ -15,5 +15,12 @@ public class appAutobus {
     autobus.mantener();
     autobus.arreglar();
     autobus.limpiar();
+
+    Autobus autobus2 = new Autobus("2222 DEF", "Mercedes", "diesel", 200);
+    System.out.println("A matricula do autobus es : " + autobus2.matricula);
+    System.out.println("A marca do autobus es: " + autobus2.marca);
+    System.out.println("O tipo de combustible do autobus es: " + autobus2.combustible);
+    System.out.println("O autobus ten: " + autobus2.potencia + " cv");
+
   }
 }

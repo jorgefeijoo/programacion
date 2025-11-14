@@ -17,4 +17,15 @@ public class Autobus {
   public void limpiar() {
     System.out.println("Hay que limpialo para que non se queixen");
   }
+Autobus(){
+
+}
+
+  public Autobus(String matricula , String marca , String combustible, int potencia){
+  this.matricula=matricula;
+  this.marca=marca;
+  this.combustible=combustible;
+  this.potencia=potencia;
+}
+
 }

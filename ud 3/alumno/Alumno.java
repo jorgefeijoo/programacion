@@ -16,5 +16,15 @@ public class Alumno {
   public void atender() {
     System.out.println("Estoy atentendendo a clase ");
   }
+Alumno(){
+  
+}
+public Alumno(String nome, String apelidos, String dni, int edad){
+  this.nome=nome;
+  this.apelidos=apelidos;
+  this.dni=dni;
+  this.edad=edad;
+}
+
 
 }
