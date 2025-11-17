@@ -1,10 +1,10 @@
 package autobus;
 
 public class Autobus {
-  public String matricula;
-  public String marca;
-  public String combustible;
-  public int potencia;
+  private String matricula;
+  private String marca;
+  private String combustible;
+  private int potencia;
 
   public void mantener() {
     System.out.println("Hay que mantelo para que funcione");
@@ -17,15 +17,47 @@ public class Autobus {
   public void limpiar() {
     System.out.println("Hay que limpialo para que non se queixen");
   }
-Autobus(){
 
-}
+  Autobus() {
 
-  public Autobus(String matricula , String marca , String combustible, int potencia){
-  this.matricula=matricula;
-  this.marca=marca;
-  this.combustible=combustible;
-  this.potencia=potencia;
-}
+  }
 
+  public Autobus(String matricula, String marca, String combustible, int potencia) {
+    this.matricula = matricula;
+    this.marca = marca;
+    this.combustible = combustible;
+    this.potencia = potencia;
+  }
+
+  public void setMatricula(String matricula) {
+    this.matricula = matricula;
+  }
+
+  public void setMarca(String marca) {
+    this.marca = marca;
+  }
+
+  public void setCombustible(String combustible) {
+    this.combustible = combustible;
+  }
+
+  public void setPotencia(int potencia) {
+    this.potencia = potencia;
+  }
+
+  public String getMatricula() {
+    return matricula;
+  }
+
+  public String getMarca() {
+    return marca;
+  }
+
+  public String getCombustible() {
+    return combustible;
+  }
+
+  public int getPotencia() {
+    return potencia;
+  }
 }
