@@ -19,7 +19,13 @@ public class Autobus {
   }
 
   Autobus() {
+  }
 
+  public Autobus(String matricula, String marca) {
+    this.matricula = matricula;
+    this.marca = marca;
+    this.combustible = "diesel";
+    this.potencia = 123;
   }
 
   public Autobus(String matricula, String marca, String combustible, int potencia) {
@@ -29,7 +35,10 @@ public class Autobus {
     this.potencia = potencia;
   }
 
-  public void setMatricula(String matricula) {
+  public void setMatricula(String matricula) throws MatriculaInvalidaException  {
+    if (matricula.length() == 0) {
+      throw new MatriculaInvalidaException(matricula);
+    }
     this.matricula = matricula;
   }
 

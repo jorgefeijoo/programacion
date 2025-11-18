@@ -2,32 +2,32 @@ public class Ascensor {
   private int piso;// creacion de los atributos
   private int limite;
   public String Situacion;
-
   // creacion de los metodos
   public void Subir(int pisos) {
-    if (piso > limite) {
-      System.out.println("Non hai mais pisos");
-    } else {
-      piso = piso + pisos;
-    }
+  
+      piso = piso + pisos;// creamos la operacion para que suba de pisos
+  
   }
 
   public void Bajar(int npisos) {
-    if (piso > limite) {
 
-    } else {
-      piso = piso - npisos;
-    }
+      piso = piso - npisos;// creamos la operacion para que baje de pisos
+   
   }
 
   public void Situacion() {
-    System.out.println(piso);
+    if(piso <0 || piso >4){/*  creamos la condicion para que si se pasa para arriba o para abajo se muestre este mensaje si no que se muestre el siguiente mensaje*/
+      System.out.println("Non se pode acceder a ningun este piso");
+    }else{
+      System.out.println("O piso no que estas é "+piso);// si no se enseñara el piso en el que estas
+    }
+    
   }
 
   // creacion do constructor por defecto
   public Ascensor() {
   }
-
+//creacion del constructor
   public Ascensor(int piso, int limite) {
     this.piso = piso;
     this.limite = limite;
