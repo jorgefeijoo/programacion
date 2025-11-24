@@ -16,7 +16,7 @@ public class AppAscensor {
       System.out.println("3. Mostrar");
       System.out.println("4. Sair");
       opcion = sc.nextInt();
-      System.out.println("A opcion que estas introducinde e: " + opcion);
+      System.out.println("A opcion que estas introducindo e: " + opcion);
       switch (opcion) {// creamos un switch para que segun la opcion que marcamos se ha el caso
         case 1:
           System.out.print("Introduce os pisos que queres subir: ");// preguntamos por teclado o numero de pisos que

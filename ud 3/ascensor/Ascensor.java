@@ -15,8 +15,8 @@ public class Ascensor {
   }
 
   public void Bajar(int npisos) {
-    if (piso - npisos < 0) {
-      System.out.println("Non se pode baixar " + npisos + " pisos");
+    if (piso - npisos < 0) { System.out.println("Non se pode baixar " + npisos + " pisos");
+     
       piso = 0;
     } else {
       piso = piso - npisos;// creamos la operacion para que baje de pisos

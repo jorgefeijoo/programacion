@@ -1,6 +1,14 @@
+import java.util.Scanner;
 public class AppConta {
   public static void main(String[] args) {// para que o programa sexa executable
-    Conta personal = new Conta("ABC123", "Jorge", 100.53); // creamos o obxeto conta coa variable persoal
+    Scanner sc =new Scanner(System.in);
+    System.out.print("Introduce o teu id da conta bancaria: ");
+    String id =sc.nextLine();
+    System.out.print("Introduce o nome do propietario: ");
+    String nomeProp = sc.nextLine();
+    System.out.print("Introduce o teu saldo da conta: ");
+    double saldo = sc.nextDouble();
+    Conta personal = new Conta(id,nomeProp,saldo); // creamos o obxeto conta coa variable persoal
 
     // mostramos os valores
     System.out.println("O saldo da conta e: " + personal.getSaldo());
