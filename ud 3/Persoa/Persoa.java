@@ -26,14 +26,14 @@ public class Persoa {
     this.nome = nome;
     this.idade = idade;
     if (eCorrectaIdade(idade)) {
-
+System.out.println("A idade da persoa e: "+idade);
     } else {
       System.out.println("A idade que estas introducindo non e correcta");
     }
     this.DNI = DNI;
     this.sexo = sexo;
     if (sexo == 'H' || sexo == 'M') {
-      System.out.println("O teu sexo e: " + sexo);
+      System.out.println("O  sexo da persoa e : " + sexo);
     } else {
       System.out.println("No es posible introducir ese sexo");
     }

@@ -17,14 +17,16 @@ public class AppPersoa {
     double peso = sc.nextDouble();
     System.out.print("Introduce a tua altura: ");
     double altura = sc.nextDouble();
-
+System.out.println(" ");
     Persoa persona = new Persoa(nome, idade, dni, sexo, peso, altura);
-    System.out.println("A idade da persoa e: " + persona.getidade());
+    System.out.println("O nome da persoa e: "+persona.getNome());
+    //System.out.println("A idade da persoa e: " + persona.getidade());
     System.out.println("O DNI da persoa e: " + persona.getDNI());
 
-    System.out.println("O sexo da persoa e: " + persona.getSexo());
+   // System.out.println("O sexo da persoa e: " + persona.getSexo());
     System.out.println("O peso da persoa e: " + persona.getPeso());
     System.out.println("A altura da persoa e: " + persona.getAltura());
+    
 
   }
 }
