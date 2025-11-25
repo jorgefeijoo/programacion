@@ -37,6 +37,7 @@ public class Conta {
         System.out.println("O id da conta e: " + getIdConta());
         System.out.println("O titular  da conta e: " + getTitular());
         System.out.println("O saldo da conta e: " + getSaldo());
+        System.out.println("O ultimo movemento da conta e: : " + getUltimoMovemento());
     }
 
     // creamos o contructor por defecto
