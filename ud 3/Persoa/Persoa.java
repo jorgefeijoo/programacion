@@ -16,6 +16,31 @@ public class Persoa {
 
   }
 
+  public void amosarInformacion() {// creamos o metodo para amosar informacion
+    System.out.println("O nome da persoa e: " + getNome());
+    System.out.println("A idade da persoa e: " + getidade());
+    System.out.println("O DNI da persoa e: " + getDNI());
+
+    System.out.println("O sexo da persoa e: " + getSexo());
+    System.out.println("O peso da persoa e: " + getPeso());
+    System.out.println("A altura da persoa e: " + getAltura());
+  }
+
+  public boolean eMaiorIdade() {// creamos un metodo con una condicion para comprobar si tiene mas de 18 o no
+    if (idade >= 18) {
+      return true;
+    } else {
+      return false;
+    }
+
+  }
+
+  public double calcularIMC() {// creamos un metodo para calcular el IMC
+    double IMC = peso / (altura * altura);
+    return IMC;
+
+  }
+
   // creamos o constructor por defecto
   public Persoa() {
 
@@ -25,15 +50,16 @@ public class Persoa {
   public Persoa(String nome, int idade, String DNI, char sexo, double peso, double altura) {
     this.nome = nome;
     this.idade = idade;
-    if (eCorrectaIdade(idade)) {
-System.out.println("A idade da persoa e: "+idade);
+    if (eCorrectaIdade(idade) == true) {// creamos a condicion para que la idade solo sea entre 1y 150
+      this.idade = idade;
     } else {
-      System.out.println("A idade que estas introducindo non e correcta");
+      System.out.println("Non e posible introducir esa idade");
     }
+
     this.DNI = DNI;
     this.sexo = sexo;
-    if (sexo == 'H' || sexo == 'M') {
-      System.out.println("O  sexo da persoa e : " + sexo);
+    if (sexo == 'H' || sexo == 'M') {// creamos a condicion para introducir solo o sexo M o H
+      this.sexo = sexo;
     } else {
       System.out.println("No es posible introducir ese sexo");
     }
@@ -47,6 +73,12 @@ System.out.println("A idade da persoa e: "+idade);
   }
 
   public void setIdade(int idade) {
+    if (idade >= 0 && idade <= 150) {
+      System.out.println("A idade da persoa e: " + idade);
+    } else {
+      System.out.println("Non se pode introducir a idade ");
+    }
+
     this.idade = idade;
   }
 
@@ -55,6 +87,12 @@ System.out.println("A idade da persoa e: "+idade);
   }
 
   public void setSexo(char sexo) {
+    if (sexo == 'H' || sexo == 'M') {// creamos a condicion para introducir solo o sexo M o H
+      System.out.println("O  sexo da persoa e : " + sexo);
+    } else {
+      System.out.println("No es posible introducir ese sexo");
+    }
+
     this.sexo = sexo;
   }
 

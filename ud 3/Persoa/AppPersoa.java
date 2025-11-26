@@ -17,16 +17,22 @@ public class AppPersoa {
     double peso = sc.nextDouble();
     System.out.print("Introduce a tua altura: ");
     double altura = sc.nextDouble();
-System.out.println(" ");
+    System.out.println(" ");
     Persoa persona = new Persoa(nome, idade, dni, sexo, peso, altura);
-    System.out.println("O nome da persoa e: "+persona.getNome());
-    //System.out.println("A idade da persoa e: " + persona.getidade());
-    System.out.println("O DNI da persoa e: " + persona.getDNI());
-
-   // System.out.println("O sexo da persoa e: " + persona.getSexo());
-    System.out.println("O peso da persoa e: " + persona.getPeso());
-    System.out.println("A altura da persoa e: " + persona.getAltura());
-    
+    persona.amosarInformacion();
+    System.out.println(" ");
+    persona.setSexo('H');
+    persona.setIdade(18);
+    System.out.println(" ");
+    persona.amosarInformacion();
+    System.out.println(" ");
+    if (persona.eMaiorIdade() == true) {
+      System.out.println("A persoa e maior de idade");
+    } else {
+      System.out.println("A persoa e menor de idade ");
+    }
+    System.out.println(" ");
+    System.out.println("O indice de masa corporal de " + persona.getNome() + " e " + persona.calcularIMC());
 
   }
 }
