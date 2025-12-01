@@ -17,7 +17,10 @@ public class Cor {
   }
 
   public void filtro() {
-
+double filtror=1*red;
+double filtrog=0*green;
+double filtrob=0*blue;
+System.out.println("filtror: "+filtror+" filtrog: "+ filtrog+" filtrob: "+filtrob);
   }
 
   // creamos o constructor por defecto
