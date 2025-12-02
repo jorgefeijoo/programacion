@@ -9,6 +9,7 @@ public class Cor {
     System.out.println("Red: " + getRed() + " Green: " + getGreen() + " Blue: " + getBlue());
   }
 
+  // creamos o metodo gris para calcular la media de los 3 colores
   public void gris() {
     double RGB = (red + green + blue) / 3;
     red = RGB;
@@ -16,11 +17,20 @@ public class Cor {
     blue = RGB;
   }
 
-  public void filtro() {
-double filtror=1*red;
-double filtrog=0*green;
-double filtrob=0*blue;
-System.out.println("filtror: "+filtror+" filtrog: "+ filtrog+" filtrob: "+filtrob);
+  // creamos o metodo filtro e creamos as varibles para introducir los valores
+  // tambien creamos la condcion para que solo se pueda meter solo numero entre 0
+  // e 1 aparte de multiplicar o filtro polo valor de red
+  public boolean filtro(double filtror, double filtrog, double filtrob) {
+    if (filtror >= 0 && filtror <= 1 && filtrog >= 0 && filtrog <= 1 && filtrob >= 0 && filtrob <= 1) {
+      red = filtror * red;
+      green = filtrog * green;
+      blue = filtrob * blue;
+      return true;
+
+    } else {
+      return false;
+    }
+
   }
 
   // creamos o constructor por defecto
