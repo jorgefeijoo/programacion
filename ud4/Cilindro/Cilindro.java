@@ -35,13 +35,14 @@ public class Cilindro {
     System.out.println("El resultado del volumen es: " + volumen);
   }
 
+  // volvemos a crear los metodos pero con el static
   public static void area(double radio, double altura) {
-    double area = 2 * Math.PI * getRadio() * (getRadio() + getAltura());
+    double area = 2 * Math.PI * radio * (radio + altura);
     System.out.println("El resultado del area es: " + area);
   }
 
   public static void volumen(double radio, double altura) {
-    double volumen = Math.PI * (getRadio() * getRadio()) * getAltura();
+    double volumen = Math.PI * (radio * radio) * altura;
     System.out.println("El resultado del volumen es: " + volumen);
   }
 
