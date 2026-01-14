@@ -18,9 +18,12 @@ public class Caracteres {
     if (valor == 0) {
       System.out.println("El valor no puede ser 0 el programa finalizo");
     }
-    char car = (char) valor;
-    System.out.println("Valor Unicode " + valor);
-    System.out.println("Representacion " + car);
+
+    /*
+     * char car = (char) valor;
+     * System.out.println("Valor Unicode " + valor);
+     * System.out.println("Representacion " + car);
+     */
 
   }
 }
