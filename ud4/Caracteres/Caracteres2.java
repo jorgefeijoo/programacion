@@ -1,7 +1,9 @@
+
 import java.util.Scanner;
 
 public class Caracteres2 {
-     public static void main(String[] args) {
+
+    public static void main(String[] args) {
         // creamos las variables
         Scanner sc = new Scanner(System.in);
         // declaro las variables
@@ -9,7 +11,7 @@ public class Caracteres2 {
         int menu = 0;
         int numero = 0;
         int i = 1;
-        int cuenta=0;
+        int cuenta = 0;
 
         // creo el bucle para comprobar que el numero que que introduzca sea entre 1 y
         // 50 si no que se guarde en la variable valor
@@ -36,42 +38,26 @@ public class Caracteres2 {
                 System.out.print("El numero que estas introduciendo es: ");
                 menu = sc.nextInt();
                 // creo el switch para el menu que se muestre la opcion escogida
+                i = 1;
+
                 switch (menu) {
-                    case 1:
+                    case 1 -> {
                         // creo los bucles para que me pida el numero el numero de veces que le puse arriba
-                    do {
+                        do {
                             System.out.print("Introduce un numero: ");
                             numero = sc.nextInt();
                             i++;
-                           // aqui me da el valor unicode 
+                            // aqui me da el valor unicode 
                             char car = (char) numero;
                             System.out.println("Valor Unicode " + numero);
                             System.out.println("Representacion " + car);
-                            if(Character.isLetter(car)==true){
-                                cuenta++;
+                            if (Character.isLetter(car) == true) {
+                                System.out.println(cuenta++);
                             }
-                             
+
                         } while (i <= valor);
-
-                        break;
-                    case 2:
-                        
-                    do {
-
-                            System.out.print("Introduce un numero: ");
-                            numero = sc.nextInt();
-                            i++;
-                            char car = (char) numero;
-                            System.out.println("Valor Unicode " + numero);
-                            System.out.println("Representacion " + car);
-                            if(Character.isDigit(car)==true){
-                                cuenta++;
-                               
-                            }
-                        } while (i <= valor);
-                        break;
-
-                    case 3:
+                    }
+                    case 2 -> {
                         do {
 
                             System.out.print("Introduce un numero: ");
@@ -80,14 +66,14 @@ public class Caracteres2 {
                             char car = (char) numero;
                             System.out.println("Valor Unicode " + numero);
                             System.out.println("Representacion " + car);
-                            if(Character.isUpperCase(car)==true){
-                                cuenta++;
-                                
+                            if (Character.isDigit(car) == true) {
+                                System.out.println(cuenta++);
+
                             }
                         } while (i <= valor);
-                        break;
+                    }
 
-                    case 4:
+                    case 3 -> {
                         do {
 
                             System.out.print("Introduce un numero: ");
@@ -96,25 +82,34 @@ public class Caracteres2 {
                             char car = (char) numero;
                             System.out.println("Valor Unicode " + numero);
                             System.out.println("Representacion " + car);
-                             System.out.println(Character.toUpperCase(car));
+                            if (Character.isUpperCase(car) == true) {
+                                System.out.println(cuenta++);
+
+                            }
                         } while (i <= valor);
-                       
-                        break;
+                    }
 
-                    case 5:
-                        System.out.println("El programa finalizo");
-                        break;
+                    case 4 -> {
+                        do {
 
-                   
+                            System.out.print("Introduce un numero: ");
+                            numero = sc.nextInt();
+                            i++;
+                            char car = (char) numero;
+                            System.out.println("Valor Unicode " + numero);
+                            System.out.println("Representacion " + car);
+                            System.out.println(Character.toUpperCase(car));
+                        } while (i <= valor);
+                    }
+
+                    case 5 -> System.out.println("El programa finalizo");
+
                 }
-                System.out.println("La cuenta es: " + cuenta);
+
                 // condicion para que solo abandone si se pulsa el 5
             } while (menu != 5);
-
-           
 
         }
     }
 
 }
-

@@ -36,7 +36,7 @@ public class Caracteres {
 
             System.out.print("Numero del menu: ");
             menu = sc.nextInt();
-            
+
             if (menu < 1 || menu > 5) {
                 continue;
             }
@@ -46,7 +46,7 @@ public class Caracteres {
             }
 
             cuenta = 0;
-            
+
             // creo los bucles para que me pida el numero el numero de veces que le puse arriba
             for (int i = 0; i < valor; i++) {
                 System.out.print("Introduce un numero: ");
@@ -55,41 +55,36 @@ public class Caracteres {
                 char car = (char) numero;
                 System.out.println("Valor Unicode " + numero);
                 System.out.println("Representacion " + car);
-              /*   System.out.println(Character.isLetter(car));
+                /*   System.out.println(Character.isLetter(car));
                 System.out.println(Character.isDigit(car));
                 System.out.println(Character.isUpperCase(car));
                 System.out.println(Character.toUpperCase(car));*/
                 // creo el switch para el menu que se muestre la opcion escogida
-                
+
                 switch (menu) {
-                    case 1:
-                        if (Character.isLetter(car)==true) {
+                    case 1 -> {
+                        if (Character.isLetter(car)) {
                             cuenta++;
                         }
-                        break;
-                    case 2:
-                    
-                    if(Character.isDigit(car)==true){
+                    }
+                    case 2 -> {
+                        if (Character.isDigit(car)) {
                             cuenta++;
                         }
-                            
-                        break;
+                    }
 
-                    case 3:
-                       if( Character.isUpperCase(car)== true){
-                        cuenta++;
-                       }
+                    case 3 -> {
+                        if (Character.isUpperCase(car)) {
+                            cuenta++;
+                        }
+                    }
 
-                        break;
-
-                    case 4:
-                         System.out.println(Character.toUpperCase(car));
-                        break;
+                    case 4 -> System.out.println(Character.toUpperCase(car));
                 }
             }
 
-            System.out.println("La cuenta es "+cuenta);
-            
+            System.out.println("La cuenta es " + cuenta);
+
         }
     }
 
