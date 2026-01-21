@@ -16,23 +16,36 @@ public class Cadenas {
     // creamos a variable para a concatenacion
 
     String concat1 = cadena1 + cadena2;
-    System.out.println(concat1);
+    // Para pasar los caracteres de las minusculas a las maiusculas
+    System.out.println(concat1.toUpperCase());
 
     // condicion para ver si la cadena esta baleira
     if (concat1.isEmpty()) {
       System.out.println("La cadena esta baleira");
     }
-    if (concat1 == "") {//
+    if (concat1.equals("")) {//
       System.out.println("La cadena esta vacia por el segundo metodo");
     } else {
 
       // creamos a variable longitud para contar la longitud mediante el length
       int lonxitude1 = cadena1.length() + cadena2.length();
       System.out.println("La longitud de la primera cadena es: " + lonxitude1);
+
+      // pasar de String a cadena
+      int numero = 150;
+      String texto = String.valueOf(numero);
+      System.out.println(texto);
+
       // creamos o bucle para decir donde esta cada posicion
 
       for (int i = 0; i < lonxitude1; i++) {
         System.out.println("Carácter en posición " + i + ": " + concat1.charAt(i));
+      }
+      // comprueba si son iguales las cadenas
+      if (cadena1.equals(cadena2)) {
+        System.out.println("Son iguales");
+      } else {
+        System.out.println("No son iguales");
       }
 
     }
@@ -45,7 +58,9 @@ public class Cadenas {
     String cadena4 = sc.nextLine();
     // creamos a variable para a concatenacion
     String concat2 = cadena3.concat(cadena4);
-    System.out.println(concat2);
+    // pasamos todos los caracteres a minusculas
+    concat2.toLowerCase();
+    System.out.println(concat2.toLowerCase());
     // creamoos la condicion para saber si esta baleira
 
     if (concat2.isEmpty()) {
@@ -61,6 +76,11 @@ public class Cadenas {
       for (int i = 0; i < lonxitude2; i++) {
         System.out.println("Carácter en posición " + i + ": " + concat2.charAt(i));
       }
+    }
+    if (cadena3.equals(cadena4)) {
+      System.out.println("Son iguales");
+    } else {
+      System.out.println("No son iguales");
     }
 
   }
