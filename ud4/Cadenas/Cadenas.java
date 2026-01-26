@@ -1,4 +1,3 @@
-package Cadenas;
 
 import java.util.Scanner;
 
