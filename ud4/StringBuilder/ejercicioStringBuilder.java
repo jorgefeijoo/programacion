@@ -21,18 +21,20 @@ public class ejercicioStringBuilder {
     return cadea;
   }
 
-  public static String InsertarPalabra(String cadea) {
+  public static String InsertarPalabra(String cadea, int pos) {
+    Scanner sc = new Scanner(System.in);
     StringBuilder sb = new StringBuilder();
     sb.append(cadea);
-
-    sb.insert(4, " anxito ");
+    System.out.print("Introduce a palabra que quieres meter: ");
+    String palabra = sc.nextLine();
+    sb.insert(pos, palabra);
     System.out.println("Insertar: " + sb.toString());
     return cadea;
   }
 
   public static String substituirVogais(String cadea) {
     StringBuilder sb = new StringBuilder();
-    String vocales = "aeiou";
+    String vocales = "aeiouAEIOU";
     for (int i = 0; i < cadea.length(); i++) {
       char caracteres = cadea.charAt(i);
       if (vocales.indexOf(caracteres) == -1) {
@@ -51,7 +53,7 @@ public class ejercicioStringBuilder {
 
     ejercicioStringBuilder.CadeaInversa(cadea);
     ejercicioStringBuilder.cambioPalabra(cadea);
-    ejercicioStringBuilder.InsertarPalabra(cadea);
+    ejercicioStringBuilder.InsertarPalabra(cadea, 4);
     System.out.println(ejercicioStringBuilder.substituirVogais(cadea));
 
     sc.close();
