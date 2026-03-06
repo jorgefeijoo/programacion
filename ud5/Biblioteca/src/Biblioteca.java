@@ -37,7 +37,7 @@ public class Biblioteca {
         
         Iterator it = listaxe.iterator();
          listaxe.add(new Libro("Miguel de Cervantes", "Real academia", "123456789", 1376, "LIT-CER-01", "Don Quijote"));
-        
+        String borrarLibro=" ";
 
         while (menu != 5) {
 
@@ -63,18 +63,22 @@ public class Biblioteca {
                 case 2:
                     System.out.print("Introduce la signatura: ");
                     sc.nextLine();
-                     String BorrarLibro = sc.nextLine();
+                      borrarLibro = sc.nextLine();
 
-                    if (listaxe.contains(BorrarLibro)) {
-                        listaxe.remove(6);
-                    }
+                  
                     while (it.hasNext()) {
                         Libro aux = (Libro) it.next();
                        System.out.println(aux.getTitulo() + " " + aux.getAutor() + " " + aux.getEditorial() + " " + aux.getISBN() + " " + aux.getSignatura()+ " "+ aux.getPaxinas());
+                     if (listaxe.equalsIgnoreCase(lib1.getSignatura())) {
+                        listaxe.remove(6);
+                    }
                     }
 
                     break;
                 case 3:
+                    if (listaxe.contains(borrarLibro)) {
+                        listaxe.set(menu, lib1);
+                    }
                    
 
                     break;
@@ -92,3 +96,6 @@ public class Biblioteca {
 
     }
 }
+
+/* desenvolver un programa en java que permita xestionar una lista de enteiros usanso array list
+ . Devera crear a lista de obxetos do tipo Integer que debe permitir engadir numeros amosar por pantalla o seu contenido e o seu tamaño e se podera eliminar por posicion e valor e mostrala de novo */
