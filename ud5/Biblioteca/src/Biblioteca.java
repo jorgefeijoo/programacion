@@ -44,7 +44,7 @@ public class Biblioteca {
         int menu = 0;
         //creo la lista de tipo libro
         ArrayList<Libro> listaxe = new ArrayList<>();
-        listaxe.add(new Libro("Miguel de Cervantes", "Real academia", 123456789, 1376, "LIT-CER-01", "Don Quijote"));
+        
 
         while (menu != 5) {
 
@@ -106,6 +106,33 @@ public class Biblioteca {
 
                                 break;
 
+                                case "signatura":
+                                System.out.println("Introduce el valor del elemento que quieres cambiar");
+                                String Signatura = sc.nextLine();
+                                libroAuxi.setTitulo(Signatura);
+
+                                break;
+
+                                case "autor":
+                                System.out.println("Introduce el valor del elemento que quieres cambiar");
+                                String autor = sc.nextLine();
+                                libroAuxi.setTitulo(autor);
+
+                                break;
+
+                                case "isbn":
+                                System.out.println("Introduce el valor del elemento que quieres cambiar");
+                                String isbn = sc.nextLine();
+                                libroAuxi.setTitulo(isbn);
+
+                                break;
+
+                                case "paxinas":
+                                System.out.println("Introduce el valor del elemento que quieres cambiar");
+                                String paxinas = sc.nextLine();
+                                libroAuxi.setTitulo(paxinas);
+
+                                break;
 
                             default:
                                 break;
