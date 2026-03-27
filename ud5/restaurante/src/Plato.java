@@ -1,22 +1,31 @@
 public class Plato {
-  private String id;
+  private int id;
+  private String tipo;
 
-  public String getId() {
+  public Plato(int id, String tipo) {
+    this.id = id;
+    this.tipo = tipo;
+  }
+
+  public int getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(int id) {
     this.id = id;
   }
 
-  public Plato(String id) {
-    this.id = id;
+  public String getTipo() {
+    return tipo;
+  }
+
+  public void setTipo(String tipo) {
+    this.tipo = tipo;
   }
 
   @Override
-
   public String toString() {
-    return id;
+    return id + " " + tipo;
   }
 
 }
