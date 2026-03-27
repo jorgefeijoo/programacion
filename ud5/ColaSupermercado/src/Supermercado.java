@@ -33,7 +33,7 @@ public class Supermercado {
           if (colaSupermecadillo.isEmpty()) {
             System.out.println("La cola esta vacia");
           } else {
-            colaSupermecadillo.remove();
+            colaSupermecadillo.removeFirst();
           }
 
           break;
