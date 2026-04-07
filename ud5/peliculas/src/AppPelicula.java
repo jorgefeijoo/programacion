@@ -38,9 +38,10 @@ public class AppPelicula {
     System.out.println("\n" + diferencia);
 
     HashSet<Pelicula> diferencia1 = new HashSet<>(set1);
-    diferencia.removeAll(set);
+    diferencia1.removeAll(set);
 
     System.out.println("\n" + diferencia1);
+
 
   }
 }

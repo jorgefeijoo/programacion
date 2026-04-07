@@ -6,14 +6,33 @@ public class Garaje {
     public static void main(String[] args) {
         ArrayList<Coche> listaCoches= new ArrayList<>();
 
-        listaCoches.add(new Coche("Mercedes", "Benz", 2018);
+       
+
+        listaCoches.add(new Coche("Mercedes", "Benz", 2018));
         listaCoches.add(new Coche("BMW","M4",2020));
         listaCoches.add(new Coche("Hynday","i30R",2024));
+
+        imprimirListaxe(listaCoches);
+
+        System.out.println();
+
+       
+        Iterator it = listaCoches.iterator();
+       while (it.hasNext()) {
+        Coche cocheAño=(Coche) it.next();
+        if (cocheAño.getAno()>2019) {
+          System.out.println(" " +cocheAño);
+        }
+       }
+
     }
-    public static void imprimirListaxe(List<Coche>listaCoches){
- Iterator it = listaCoches.iterator();
+   
+   
+public static void imprimirListaxe(List<Coche>listaCoches){
+Iterator it = listaCoches.iterator();
  while (it.hasNext()) {
-    coches=
+    Coche cocheAux= (Coche) it.next();
+    System.out.println(" " +cocheAux);
  }
     }
 }

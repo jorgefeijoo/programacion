@@ -9,7 +9,7 @@ public class buscarPalabras {
     System.out.print("Introduce a frase: ");
     String frase = sc.nextLine();
     System.out.print("Introduce os caracteres a consultar: ");
-    String caracteres = sc.nextLine();
+    String frase = sc.nextLine();
     String fraseMinusculas = frase.toLowerCase();
     System.out.println(fraseMinusculas);
 
@@ -18,16 +18,17 @@ public class buscarPalabras {
     int i = 0;
 
     // creamos o bucle que se repita mientras encuentre alguna ocorrencia
-    while (fraseMinusculas.indexOf(caracteres, i) != -1) {
+    while (fraseMinusculas.indexOf(frase, i ) != -1) {
 
+    
       // le indicamos que la posicion es desde donde encontro la primera ocorrencia
-      posicion = fraseMinusculas.indexOf(caracteres, i);
+      posicion = fraseMinusculas.indexOf(frase, i);
       // si encuentra una ocorrencia se le suma uno al contador
       contador++;
 
       // le pasamos a i el valor para que empiece desde donde acabo + los caracteres
       // de la palabra
-      i = posicion + caracteres.length();
+      i = posicion + frase.length();
 
     }
 

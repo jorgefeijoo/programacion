@@ -57,6 +57,8 @@ public class listaEnteros {
             System.out.println("No existe ese valor dentro de la lista");
         }
 
+        
+
         System.out.println(listaxeNumeros);
 
     }

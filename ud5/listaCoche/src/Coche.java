@@ -27,6 +27,9 @@ public class Coche {
         this.ano = ano;
     }
 
-
+     @Override
+    public String toString(){
+        return "marca: " + marca + " modelo: "+modelo + " ano: "+ano;
+    }
     
 }
