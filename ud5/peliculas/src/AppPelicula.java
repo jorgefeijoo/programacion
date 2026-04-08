@@ -20,28 +20,34 @@ public class AppPelicula {
     set1.add(p4);
     set1.add(p5);
     set1.add(p3);
+
+    System.out.println("Las peliculas del primer amigo son: " + set);
+
+    System.out.println("\nLas peliculas del segundo amigo son: " + set1);
     // creamos otro conjunto para poner uno dentro de otro
     HashSet<Pelicula> union = new HashSet<>(set);
     // metemos los conjuntos en uno aparte
     union.addAll(set1);
 
-    System.out.println(union);
+    System.out.println("\nEl conjunto de todas las peliculas es: " + union);
 
+    // creamos un conjunto para meter las peliculas en comun en un nuevo conjunto
     HashSet<Pelicula> interseccion = new HashSet<>(set);
     interseccion.retainAll(set1);
 
-    System.out.println("\n" + interseccion);
+    System.out.println("\nLas peliculas que tienen en comun son: " + interseccion);
 
+    // metemos las peliculas esclusivas del primer amigo en un conjunto
     HashSet<Pelicula> diferencia = new HashSet<>(set);
     diferencia.removeAll(set1);
 
-    System.out.println("\n" + diferencia);
+    System.out.println("\nLas peliculas que solo tiene el primer amigo son: " + diferencia);
 
+    // metemos las peliculas del 2 conjunto en un nuevo conjunto y lo imprimo
     HashSet<Pelicula> diferencia1 = new HashSet<>(set1);
     diferencia1.removeAll(set);
 
-    System.out.println("\n" + diferencia1);
-
+    System.out.println("\nLas peliculas que solo tiene el segundo amigo son: " + diferencia1);
 
   }
 }
