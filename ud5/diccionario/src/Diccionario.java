@@ -89,6 +89,7 @@ public class Diccionario {
           return;
 
         default:
+          System.out.println("Prueba numeros entre 1 y 5");
           break;
 
       }
