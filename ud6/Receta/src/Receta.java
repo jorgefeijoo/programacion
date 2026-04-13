@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class Receta {
 
@@ -25,7 +27,7 @@ public class Receta {
 
     ArrayList<Ingredientes> r1 = new ArrayList<>();
 
-    Receta receta1 = new Receta("Huevos rotos con Jamon");
+    Receta receta1 = new Receta("Huevos rotos con Jamon\n");
 
     System.out.println("El nombre de la receta es: " + receta1);
 
@@ -37,7 +39,16 @@ public class Receta {
     r1.add(new Ingredientes(4, "aceite de oliva", "cucharadas"));
     r1.add(new Ingredientes(1, "sal", "cucharada"));
 
-    System.out.println("\n" + r1);
+    imprimirListaxe(r1);
+  }
+
+  public static void imprimirListaxe(List<Ingredientes> r1) {
+    Iterator<Ingredientes> it = r1.iterator();
+    while (it.hasNext()) {
+      Ingredientes auxiliar = (Ingredientes) it.next();
+      System.out.println(auxiliar);
+    }
+
   }
 
 }
