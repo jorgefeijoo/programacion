@@ -33,6 +33,7 @@ public class Ingredientes {
     this.unidade = unidade;
   }
 
+  // metodo para imprimir elementos del objeto ingredientes
   @Override
   public String toString() {
     return "cantidade: " + cantidade + " nome: " + nome + " unidade: " + unidade;
