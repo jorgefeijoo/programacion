@@ -5,14 +5,18 @@ import java.util.List;
 public class Receta {
 
   private String nomeReceta;
+  ArrayList<Ingredientes> r1 = new ArrayList<>();
+  ArrayList<Instruccion> instrucciones = new ArrayList<>();
+
+  public Receta(String nomeReceta) {
+    this.nomeReceta = nomeReceta;
+    this.r1 = new ArrayList<>();
+    this.instrucciones = new ArrayList<>();
+  }
 
   @Override
   public String toString() {
     return nomeReceta;
-  }
-
-  public Receta(String nomeReceta) {
-    this.nomeReceta = nomeReceta;
   }
 
   public String getNomeReceta() {
@@ -25,18 +29,15 @@ public class Receta {
 
   public static void main(String[] args) {
 
-    // creamos la lista
-
     ArrayList<Ingredientes> r1 = new ArrayList<>();
-
-// creamos un objeto para darle el nombre a la receta
+    // creamos un objeto para darle el nombre a la receta
     Receta receta1 = new Receta("Huevos rotos con Jamon\n");
 
     System.out.println("El nombre de la receta es: " + receta1);
 
     System.out.println("\nLos ingredientes son: ");
 
-    //añado los ingredientes a la lista
+    // añado los ingredientes a la lista
 
     Ingredientes i1 = new Ingredientes(3, "patatas", "medianas");
 
@@ -45,15 +46,16 @@ public class Receta {
     r1.add(new Ingredientes(100, "jamon serrano", "gramos"));
     r1.add(new Ingredientes(4, "aceite de oliva", "cucharadas"));
     r1.add(new Ingredientes(1, "sal", "cucharada"));
-// imprimo la lista usando el metodo
+    // imprimo la lista usando el metodo
     imprimirListaxe(r1);
 
     System.out.println("\nPara preparar esta Receta deberas seguir estos pasos:");
-// creo el obejto de instrucciones para poder usar el metodo que cree dentro de ella
-    Instruccion ins1 = new Instruccion();
-    
-    ins1.imprimirInstrucciones();
+    // creo el objeto de instrucciones para poder usar el metodo que cree dentro de
+    // ella
 
+    Instruccion ins1 = new Instruccion();
+
+    ins1.imprimirInstrucciones();
   }
 
   // metodo para imprimir la lista
