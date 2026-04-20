@@ -17,7 +17,7 @@ public class Main {
     System.out.println("Mostramos el metodo de ProductoRefrixerado:\n ");
     pr1.mostrarInfo();
     System.out.println("-------------------------------");
-    System.out.println("Mostramos el metodo de ProductoConxelado:\n ");
+    System.out.println("Mostramos el metodo de ProductoConxelado:👌\n ");
     pc1.mostrarInfo();
   }
 }

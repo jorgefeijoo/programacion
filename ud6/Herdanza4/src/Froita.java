@@ -21,6 +21,6 @@ public class Froita {
   }
 
   public final void comer() {
-    System.out.println("Estas comendo froita");
+    System.out.println("Estas comendo froita👌");
   }
 }
