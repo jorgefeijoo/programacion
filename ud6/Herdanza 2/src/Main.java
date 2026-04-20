@@ -11,7 +11,7 @@ public class Main {
     System.out.println("Mostramos el metodo de Producto:\n ");
     p1.mostrarInfo();
     System.out.println("-------------------------------");
-    System.out.println("Mostramos el metodo de Producto:Fresco\n ");
+    System.out.println("Mostramos el metodo de ProductoFresco:\n ");
     pf1.mostrarInfo();
     System.out.println("-------------------------------");
     System.out.println("Mostramos el metodo de ProductoRefrixerado:\n ");
