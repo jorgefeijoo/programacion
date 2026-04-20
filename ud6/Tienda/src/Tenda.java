@@ -2,7 +2,13 @@ import java.util.ArrayList;
 
 public class Tenda {
   private String nome;
-  private ArrayList<Producto> p1 = new ArrayList<>();
+
+  @Override
+  public String toString() {
+    return nome;
+  }
+
+  private ArrayList<Producto> p1;
 
   public String getNome() {
     return nome;
@@ -36,7 +42,7 @@ public class Tenda {
   // metodo para mostrar la lista
   public void mostrarListaxe() {
     for (Producto p : p1) {
-      System.out.println(p);
+      System.out.println(p);// 👌
     }
   }
 
