@@ -29,7 +29,7 @@ public final class Maza extends Froita {
 
   /*
    * @Override
-   * public void comer(){
+   * public void comer() {
    * super.comer();
    * }
    */
