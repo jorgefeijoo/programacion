@@ -51,7 +51,7 @@ public abstract class Figura implements Comparable {
   // redefinimos el metodo to String para poder imprimir el array de figuras
   @Override
   public String toString() {
-    return "el area de la figura es: " + area;
+    return "el area de la figura " + getClass() + " es: " + area + " y su color es : " + cor;
   }
 
 }
