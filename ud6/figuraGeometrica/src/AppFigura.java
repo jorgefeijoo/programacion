@@ -4,6 +4,7 @@ public class AppFigura {
   public static void main(String[] args) {
 
     // creo un array de objetos y le doy los valores a cada objeto
+
     Figura[] arrayFiguras = new Figura[9];
 
     System.out.println("\n-----TRIANGULOS------- \n");
