@@ -8,13 +8,14 @@ public class Main {
         int menu = 0;
         String nuevoDirectorio = "";
         String borrarDirectorio = "";
-        
         String ruta = "";
 
+        // pedimos los el directorio que quiere trabajar y creamos uno con ese nombre
         System.out.print("Introduce el directorio del que quieres partir: ");
         directorio= sc.nextLine();
         File f1 = new File(directorio);
        
+        // compruebo si el directorio existe y meto el bucle con el menu si existe si no muestra un mensaje de error
         if (f1.isDirectory()) {
              while (menu != 6) {
             System.out.println("---MENU DIRECTORIOS---");
@@ -26,30 +27,28 @@ public class Main {
             System.out.println("6. Sair");
             System.out.print("La opcion que estas introduciendo es: ");
             menu = sc.nextInt();
-        }
-        }else{
-            System.out.println("No existe el directorio");
-        }
 
-       
-
-            switch (menu) {
+             switch (menu) {
                 case 1:
-                    
+                    // creo un array de ficheros para listar los ficheros
                     String[] ficheiros = f1.list();
+                    //bucle para imprimir los ficheros
                     for (String ficheirillos : ficheiros) {
                         System.out.println(ficheirillos);
                         System.out.println("O tamaño do ficheiro " + ficheirillos + " es " + ficheirillos.length());
                     }
-                    System.out.println("El numero de ficheros del directorio es : " + f1.length());
+                    System.out.println("El numero de ficheros del directorio es : " + ficheiros.length);
                     break;
 
                 case 2:
+                    // pido nuevo nombre del directorio 
                     System.out.println("Introduce el nombre del nuevo directorio");
                     sc.nextLine();
                     directorio = sc.nextLine();
+                    // creo directorio con el nuevo nombre 
                     File f2 = new File(directorio);
                     f2.mkdir();
+                    // miro si existe y muestro un mensaje
                     boolean creado = f2.exists();
                     if (creado) {
                         System.out.println("El directorio " + f2 + " fue creado correctamente");
@@ -61,18 +60,25 @@ public class Main {
 
                 case 3:
 
-                    System.out.print("Deseas Borrar el directorio (S/N)");
+                // pido si se desea borrar el directorio si es si lo borro y muestro mensaje
+                    System.out.print("Deseas Borrar el directorio (S/N): ");
                     sc.nextLine();
                     borrarDirectorio= sc.nextLine();
                     if (borrarDirectorio.equals("S")) {
-                        f1.delete();
+                        if ( f1.delete()) {
+                            System.out.println("Carpeta borrada con exito");
+                        }else{
+                            System.out.println("No se borro la carpeta");
+                        }
+                        
                     }else{
-                        System.out.println("No se puede borrar el directorio");
+                        System.out.println("No se puede borrar el directorio: ");
                     }
 
                     break;
-
+    
                 case 4:
+                    // pido nombre del nuevo directorio y lo renombro
                     System.out.print("Introduce el nombre del nuevo directorio: ");
                     sc.nextLine();
                     nuevoDirectorio = sc.nextLine();
@@ -81,6 +87,7 @@ public class Main {
                     break;
 
                 case 5:
+                    //pido la ruta y la cambio 
                     System.out.print("Introduce una nueva ruta: ");
                     sc.nextLine();
                     ruta = sc.nextLine();
@@ -94,6 +101,14 @@ public class Main {
                 default:
                     break;
             }
+        }
+        }else{
+            System.out.println("No existe el directorio");
+        }
+
+       
+
+           
         }
 
     }
