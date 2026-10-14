@@ -1,0 +1,5 @@
+Ana 8.5
+Luis 4.2
+Marta 6.0
+Pedro 3.8
+Elena 9.1
